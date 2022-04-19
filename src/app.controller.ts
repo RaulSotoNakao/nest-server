@@ -10,8 +10,4 @@ export class AppController {
     return this.appService.getHello();
   }
 
-  @Get('chanchito')
-  getChanchito(): string {
-    return this.appService.getChanchito();
-  }
 }
