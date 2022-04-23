@@ -6,6 +6,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { Connection } from 'typeorm';
 import { UsuarioModule } from './usuario/usuario.module';
 import { TestModule } from './test/test.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -23,10 +24,11 @@ import { TestModule } from './test/test.module';
     ChanchitoModule,
     UsuarioModule,
     TestModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
 })
 export class AppModule {
-  // constructor(private connection: Connection) {}
+  constructor(private connection: Connection) {}
 }

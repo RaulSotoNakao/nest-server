@@ -20,6 +20,13 @@ export class UsuarioService {
     return this.usersRepository.find();
   }
 
+  findUserByName(nombre) {
+    return this.usersRepository
+      .createQueryBuilder('usuario')
+      .where('usuario.nombre = :nombre', { nombre })
+      .getOne();
+  }
+
   findOne(id: number) {
     return this.usersRepository.findOne(id);
   }

@@ -7,6 +7,8 @@ export class Usuario {
   @Column()
   nombre: string;
   @Column()
+  password: string;
+  @Column()
   contacto: string;
   @Column()
   direccion: string;
