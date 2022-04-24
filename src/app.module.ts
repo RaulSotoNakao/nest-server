@@ -5,7 +5,6 @@ import { ChanchitoModule } from './chanchito/chanchito.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Connection } from 'typeorm';
 import { UsuarioModule } from './usuario/usuario.module';
-import { TestModule } from './test/test.module';
 import { AuthModule } from './auth/auth.module';
 import { ConfigModule } from '@nestjs/config';
 
@@ -25,7 +24,6 @@ import { ConfigModule } from '@nestjs/config';
     }),
     ChanchitoModule,
     UsuarioModule,
-    TestModule,
     AuthModule,
   ],
   controllers: [AppController],
