@@ -10,9 +10,16 @@ import {
 import { ChanchitoService } from './chanchito.service';
 import { CreateChanchitoDto } from './dto/create-chanchito.dto';
 import { UpdateChanchitoDto } from './dto/update-chanchito.dto';
-import { ApiResponse, ApiTags, ApiCreatedResponse,ApiParam } from '@nestjs/swagger';
+import {
+  ApiBearerAuth,
+  ApiResponse,
+  ApiTags,
+  ApiCreatedResponse,
+  ApiParam,
+} from '@nestjs/swagger';
 
 @ApiTags('chanchito')
+@ApiBearerAuth()
 @Controller('chanchito')
 export class ChanchitoController {
   constructor(private readonly chanchitoService: ChanchitoService) {}
@@ -33,7 +40,13 @@ export class ChanchitoController {
   }
 
   @Get(':id')
-  @ApiParam({name: 'id', required: true, description: 'either an integer for the project id or a string for the project name', schema: { oneOf: [{type: 'string'}, {type: 'integer'}]}})
+  @ApiParam({
+    name: 'id',
+    required: true,
+    description:
+      'either an integer for the project id or a string for the project name',
+    schema: { oneOf: [{ type: 'string' }, { type: 'integer' }] },
+  })
   findOne(@Param('id') id: string) {
     return this.chanchitoService.findOne(+id);
   }
