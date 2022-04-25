@@ -5,12 +5,17 @@
 [circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
 [circleci-url]: https://circleci.com/gh/nestjs/nest
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
+  <p align="center">A Server with <a href="http://nodejs.org" target="_blank">Node.js</a> and Nest framework for building efficient and scalable server-side applications.</p>
     <p align="center">
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+This server can be use as scafolding to start a new development.
+It have everything ready for:
+* authorization & authentication with JWT
+* typeOrm to connect a Mysql Database
+* Class validator
+* API Documentation with Swagger 
 
 ## Installation
 
@@ -51,7 +56,6 @@ to define
 ## Stay in touch
 
 to define
-
 
 ## License
 
